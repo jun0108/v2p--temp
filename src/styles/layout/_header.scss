@@ -1,0 +1,41 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  height: var(--layout-header-height);
+  background-color: var(--color-gray-100);
+  border-bottom: 1px solid var(--color-gray-200);
+
+  &__inner {
+    @include flex-box(justify-between items-center);
+    height: 100%;
+    padding: 0 24px;
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+  }
+  &__title {
+    @include typo(var(--font-size-20), 600, var(--color-gray-90));
+  }
+}
+.footer {
+  min-height: var(--layout-footer-height);
+  padding: 5px 10px;
+  background-color: var(--color-gray-10);
+  box-sizing: border-box;
+  &__inner {
+    @include flex-box(items-center justify-center wrap);
+    height: 100%;
+    text-align: center;
+    em {
+      font-weight: 500;
+      white-space: pre;
+    }
+  }
+}
